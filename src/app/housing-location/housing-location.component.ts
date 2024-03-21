@@ -7,7 +7,7 @@ import { HousingLocation } from '../housinglocation';
   selector: 'app-housing-location',
   standalone: true,
   imports: [
-    CommonModule
+    CommonModule,
   ],
   templateUrl: './housing-location.component.html',
   styleUrl: './housing-location.component.css'
