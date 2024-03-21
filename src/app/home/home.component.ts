@@ -11,18 +11,7 @@ import { HousingLocation } from '../housinglocation';
     CommonModule,
     HousingLocationComponent
   ],
-  template: `
-    <section>
-      <form>
-        <input type="text" placeholder="Filtre por Cidade">
-        <button class="primary" type="button">Pesquise</button>
-      </form>
-    </section>
-    <section class="results">
-      <app-housing-location></app-housing-location>
-    </section>
-  `,
-  // templateUrl: './home.component.html',
+  templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
 export class HomeComponent {

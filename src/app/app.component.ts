@@ -10,17 +10,7 @@ import { HomeComponent } from './home/home.component';
     RouterOutlet,
     HomeComponent
   ],
-  template: `
-  <main>
-    <header class="brand-name">
-      <img class="brand-logo" src="../assets/logo.svg" alt="logo" aria-hidden="true">
-    </header>
-    <section class="content">
-      <app-home></app-home>
-    </section>
-  </main>
-  `,
-  // templateUrl: './app.component.html'
+  templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
