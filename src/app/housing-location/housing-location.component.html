@@ -1,1 +1,5 @@
-<p>housing-location works!</p>
+<section class="listing">
+    <img [src]="housingLocation.foto" alt="Foto exterior de {{ housingLocation.nome }}">
+    <h2 class="listing-heading">{{ housingLocation.cidade }}</h2>
+    <p class="listing-location">{{ housingLocation.cidade }}, {{ housingLocation.estado }}</p>
+</section>
