@@ -18,12 +18,12 @@ export class HomeComponent {
   readonly baseUrl = 'https://angular.io/assets/images/tutorials/faa';
 
   housingLocation: HousingLocation = {
-    id: 913,
-    nome: 'Nome de Teste',
-    cidade: 'Cidade de Teste',
+    id: 13,
+    nome: 'Beach House',
+    cidade: 'Garopaba',
     estado: 'SC',
     foto: `${this.baseUrl}/example-house.jpg`,
-    unidadesDisponiveis: 99,
+    unidadesDisponiveis: 1,
     wifi: true,
     lavanderia: true
   }
