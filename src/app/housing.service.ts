@@ -111,4 +111,12 @@ export class HousingService {
       lavanderia: true
     }
   ];
+
+  getTodasAsLocalizacoesHousing(): HousingLocation[] {
+    return this.housingLocationList;
+  }
+
+  getLocalizacaoHousingPorId(id: number): HousingLocation | undefined {
+    return this.housingLocationList.find((housingLocation) => housingLocation.id === id);
+  }
 }
