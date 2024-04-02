@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 import { HousingService } from '../housing.service';
 import { HousingLocation } from '../housinglocation';
@@ -10,6 +11,7 @@ import { HousingLocation } from '../housinglocation';
   standalone: true,
   imports: [
     CommonModule,
+    ReactiveFormsModule
   ],
   templateUrl: './detalhes.component.html',
   styleUrl: './detalhes.component.css'
