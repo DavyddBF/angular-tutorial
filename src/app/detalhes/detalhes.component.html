@@ -1,1 +1,15 @@
-<p>Id: {{ housingLocationId }}</p>
+<article>
+    <img class="listing-photo" [src]="housingLocation?.foto" alt="Foto de fora de {{ housingLocation?.nome }}">
+    <section class="listing-description">
+        <h2 class="listing-heading">{{ housingLocation?.nome }}</h2>
+        <p class="listing-location">{{ housingLocation?.cidade }}, {{ housingLocation?.estado }}</p>
+    </section>
+    <section class="listing-features">
+        <h2 class="section-heading">Sobre a localização dessa casa</h2>
+        <ul>
+            <li>Unidades disponiveis: {{ housingLocation?.unidadesDisponiveis }}</li>
+            <li>A localização contém wifi: {{ housingLocation?.wifi }}</li>
+            <li>A localização contém lavanderia: {{ housingLocation?.lavanderia }}</li>
+        </ul>
+    </section>
+</article>
