@@ -7,11 +7,11 @@ export const routes: Routes = [
     {
         path: '',
         component: HomeComponent,
-        title: 'Home page'
+        title: 'Homes | Sua casa'
     },
     {
         path: 'detalhes/:id',
         component: DetalhesComponent,
-        title: 'Home detalhes'
+        title: 'Detalhes | Sua casa'
     }
 ];
