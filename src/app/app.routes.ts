@@ -10,7 +10,7 @@ export const routes: Routes = [
         title: 'Home page'
     },
     {
-        path: 'datails/:id',
+        path: 'detalhes/:id',
         component: DetalhesComponent,
         title: 'Home detalhes'
     }
