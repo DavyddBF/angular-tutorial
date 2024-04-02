@@ -1,4 +1,4 @@
-<article>
+<article class="detalhes">
     <img class="listing-photo" [src]="housingLocation?.foto" alt="Foto de fora de {{ housingLocation?.nome }}">
     <section class="listing-description">
         <h2 class="listing-heading">{{ housingLocation?.nome }}</h2>
@@ -11,5 +11,20 @@
             <li>A localização contém wifi: {{ housingLocation?.wifi }}</li>
             <li>A localização contém lavanderia: {{ housingLocation?.lavanderia }}</li>
         </ul>
+    </section>
+    <section class="listing-apply">
+        <h2 class="section-heading">Se inscrever agora para morar aqui</h2>
+        <form [formGroup]="cadastrarForm" (submit)="cadastrarNoApp()">
+            <label for="nome">Nome</label>
+            <input id="nome" type="text" formControlName="nome">
+
+            <label for="sobrenome">Sobrenome</label>
+            <input id="sobrenome" type="text" formControlName="sobrenome">
+
+            <label for="email">Email</label>
+            <input id="email" type="email" formControlName="email">
+
+            <button class="primary" type="submit">Cadastrar</button>
+        </form>
     </section>
 </article>
