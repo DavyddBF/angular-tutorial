@@ -120,7 +120,7 @@ export class HousingService {
     return this.housingLocationList.find((housingLocation) => housingLocation.id === id);
   }
 
-  enviarAplicacao(nome: string, sobrenome: string, email: string) {
+  consoleFormApp(nome: string, sobrenome: string, email: string) {
     console.log(`Aplicacao Homes recebeu: Nome: ${nome}, sobrenome: ${sobrenome}, email: ${email}`);
   }
 }
