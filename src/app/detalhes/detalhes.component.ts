@@ -16,9 +16,11 @@ import { HousingLocation } from '../housinglocation';
 })
 export class DetalhesComponent {
   rotas: ActivatedRoute = inject(ActivatedRoute);
-  housingLocationId: string = '';
+  housingService: HousingService = inject(HousingService);
+  housingLocation: HousingLocation | undefined;
 
   constructor() {
-    this.housingLocationId = this.rotas.snapshot.params['id'];
+    const housingLocationId = Number(this.rotas.snapshot.params['id']);
+    this.housingLocation = this.housingService.getLocalizacaoHousingPorId(housingLocationId); 
   }
 }
