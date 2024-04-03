@@ -21,14 +21,14 @@ export class DetalhesComponent {
   housingService: HousingService = inject(HousingService);
   housingLocation: HousingLocation | undefined;
 
-  cadastrarForm = new FormGroup({
+  cadastrarForm: FormGroup = new FormGroup({
     nome: new FormControl(''),
     sobrenome: new FormControl(''),
     email: new FormControl('')
   });
 
   constructor() {
-    const housingLocationId = Number(this.rotas.snapshot.params['id']);
+    const housingLocationId: number = Number(this.rotas.snapshot.params['id']);
     this.housingLocation = this.housingService.getLocalizacaoHousingPorId(housingLocationId); 
   }
 
