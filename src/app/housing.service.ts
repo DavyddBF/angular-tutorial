@@ -111,7 +111,7 @@ export class HousingService {
   //   }
   // ];
 
-  api= 'http://localhost:3000/locations';
+  api = 'http://localhost:3000/locations';
 
   async getTodasAsLocalizacoesHousing(): Promise<HousingLocation[]> {
     const dadosApi: Response = await fetch(this.api);
