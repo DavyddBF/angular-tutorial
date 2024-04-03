@@ -33,9 +33,13 @@ export class HomeComponent {
       return;
     }
 
-    this.filtroLocationList = this.housingLocationList.filter(
-      cadaLista => cadaLista?.cidade.toLowerCase().includes(texto.toLocaleLowerCase()
-      )
-    );
+    this.filtroLocationList = this.housingLocationList.filter(cadaLista => cadaLista?.cidade.toLowerCase().includes(texto.toLowerCase()));
+
+    // --- OUTRAS OPÇÕES DE PESQUISA ---
+    // => Mais para frente irei incluir elas...
+
+    // this.filtroLocationList = this.housingLocationList.filter(cadaLista => cadaLista?.id.toString().includes(texto));
+    // this.filtroLocationList = this.housingLocationList.filter(cadaLista => cadaLista?.nome.toLowerCase().includes(texto.toLowerCase()));
+    // this.filtroLocationList = this.housingLocationList.filter(cadaLista => cadaLista?.estado.toLowerCase().includes(texto.toLowerCase()));
   }
 }
