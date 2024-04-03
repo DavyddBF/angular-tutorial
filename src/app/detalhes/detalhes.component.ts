@@ -32,7 +32,6 @@ export class DetalhesComponent {
     this.housingService.getLocalizacaoHousingPorId(housingLocationId).then(housingLocation => {
       this.housingLocation = housingLocation;
     });
-    // this.housingLocation = this.housingService.getLocalizacaoHousingPorId(housingLocationId); 
   }
 
   cadastrarNoApp(): void {

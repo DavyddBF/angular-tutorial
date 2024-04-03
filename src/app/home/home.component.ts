@@ -16,7 +16,6 @@ import { HousingService } from '../housing.service';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  readonly baseUrl = 'https://angular.io/assets/images/tutorials/faa';
 
   filtroLocationList: HousingLocation[] = [];
   housingLocationList: HousingLocation[] = [];
@@ -27,11 +26,10 @@ export class HomeComponent {
       (housingLocationList: HousingLocation[]) => {
       this.housingLocationList = housingLocationList;
       this.filtroLocationList = housingLocationList;
+      console.log(this.housingLocationList)
     });
-
-    // Código anterior - estático
-    // this.housingLocationList = this.housingService.getTodasAsLocalizacoesHousing();
-    // this.filtroLocationList = this.housingLocationList;
+    
+    console.log(this.housingLocationList)
   }
 
   filtraResultados(texto: string) {
@@ -41,12 +39,5 @@ export class HomeComponent {
     }
 
     this.filtroLocationList = this.housingLocationList.filter(cadaLista => cadaLista?.cidade.toLowerCase().includes(texto.toLowerCase()));
-
-    // --- OUTRAS OPÇÕES DE PESQUISA ---
-    // => Mais para frente irei incluir elas...
-
-    // this.filtroLocationList = this.housingLocationList.filter(cadaLista => cadaLista?.id.toString().includes(texto));
-    // this.filtroLocationList = this.housingLocationList.filter(cadaLista => cadaLista?.nome.toLowerCase().includes(texto.toLowerCase()));
-    // this.filtroLocationList = this.housingLocationList.filter(cadaLista => cadaLista?.estado.toLowerCase().includes(texto.toLowerCase()));
   }
 }
