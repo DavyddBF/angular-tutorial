@@ -111,11 +111,12 @@ export class HousingService {
   //   }
   // ];
 
-  api: string = 'http://localhost:3000/locations';
+  api= 'http://localhost:3000/locations';
 
   async getTodasAsLocalizacoesHousing(): Promise<HousingLocation[]> {
     const dadosApi: Response = await fetch(this.api);
-    return await dadosApi.json() ?? [];
+    const apiConvertida = await dadosApi.json() ?? [];
+    return apiConvertida;
 
     // Código anterior - estático
     //return this.housingLocationList;
