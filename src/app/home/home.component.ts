@@ -26,4 +26,16 @@ export class HomeComponent {
     this.housingLocationList = this.housingService.getTodasAsLocalizacoesHousing();
     this.filtroLocationList = this.housingLocationList;
   }
+
+  filtraResultados(texto: string) {
+    if(!texto) {
+      this.filtroLocationList = this.housingLocationList;
+      return;
+    }
+
+    this.filtroLocationList = this.housingLocationList.filter(
+      cadaLista => cadaLista?.cidade.toLowerCase().includes(texto.toLocaleLowerCase()
+      )
+    );
+  }
 }
