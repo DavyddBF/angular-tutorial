@@ -28,7 +28,7 @@ export class DetalhesComponent {
   });
 
   constructor() {
-    const housingLocationId: number = Number(this.rotas.snapshot.params['id']);
+    const housingLocationId: number = parseInt(this.rotas.snapshot.params['id']);
     this.housingService.getLocalizacaoHousingPorId(housingLocationId).then(housingLocation => {
       this.housingLocation = housingLocation;
     });
