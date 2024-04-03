@@ -23,8 +23,15 @@ export class HomeComponent {
   housingService: HousingService = inject(HousingService);
 
   constructor() {
-    this.housingLocationList = this.housingService.getTodasAsLocalizacoesHousing();
-    this.filtroLocationList = this.housingLocationList;
+    this.housingService.getTodasAsLocalizacoesHousing().then(
+      (housingLocationList: HousingLocation[]) => {
+      this.housingLocationList = housingLocationList;
+      this.filtroLocationList = housingLocationList;
+    });
+
+    // Código anterior - estático
+    // this.housingLocationList = this.housingService.getTodasAsLocalizacoesHousing();
+    // this.filtroLocationList = this.housingLocationList;
   }
 
   filtraResultados(texto: string) {
