@@ -8,8 +8,6 @@ Execute `ng serve` na pasta principal do projeto no seu terminal para criar um s
 
 # Config:
 
-<ul>
-    <li>Execute <script>npm install</script> para instalar as dependências do projeto.</li>
-    <li>Execute também `npm install -g json-server` para poder usar o arquivo `db.json` que mantém os dados a serem usado pela aplicação, simulando um api.</li>
-    <li>Para ativar o server execute: `json-server --watch db.json`</li>
-</ul>
+- Execute `npm install` para instalar as dependências do projeto.
+- Execute também ```npm install -g json-server``` para poder usar o arquivo `db.json` que mantém os dados a serem usados pela aplicação, simulando uma API.
+- Para ativar o servidor, execute: ```json-server --watch db.json```
