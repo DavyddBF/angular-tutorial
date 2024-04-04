@@ -11,8 +11,7 @@ export class HousingService {
 
   async getTodasAsLocalizacoesHousing(): Promise<HousingLocation[]> {
     const dadosApi: Response = await fetch(this.api);
-    const apiConvertida = await dadosApi.json() ?? [];
-    return apiConvertida;
+    return await dadosApi.json() ?? [];
   }
 
   async getLocalizacaoHousingPorId(id: number): Promise<HousingLocation | undefined> {

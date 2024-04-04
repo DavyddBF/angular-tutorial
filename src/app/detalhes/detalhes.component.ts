@@ -1,5 +1,5 @@
-import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
@@ -28,7 +28,7 @@ export class DetalhesComponent {
   });
 
   constructor() {
-    const housingLocationId: number = parseInt(this.rotas.snapshot.params['id']);
+    const housingLocationId: number = parseInt(this.rotas.snapshot.params['id'], 10);
     this.housingService.getLocalizacaoHousingPorId(housingLocationId).then(housingLocation => {
       this.housingLocation = housingLocation;
     });
@@ -39,6 +39,6 @@ export class DetalhesComponent {
       this.cadastrarForm.value.nome ?? '',
       this.cadastrarForm.value.sobrenome ?? '',
       this.cadastrarForm.value.email ?? ''
-    )
+    );
   }
 }

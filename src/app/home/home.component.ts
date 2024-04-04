@@ -18,18 +18,15 @@ import { HousingService } from '../housing.service';
 export class HomeComponent {
 
   filtroLocationList: HousingLocation[] = [];
-  housingLocationList: HousingLocation[] = [];
   housingService: HousingService = inject(HousingService);
+  housingLocationList: HousingLocation[] = [];
 
   constructor() {
-    this.housingService.getTodasAsLocalizacoesHousing().then(
-      (housingLocationList: HousingLocation[]) => {
-      this.housingLocationList = housingLocationList;
-      this.filtroLocationList = housingLocationList;
-      console.log(this.housingLocationList)
-    });
-    
-    console.log(this.housingLocationList)
+    this.housingService.getTodasAsLocalizacoesHousing()
+      .then((housingLocationList: HousingLocation[]) => {
+        this.housingLocationList = housingLocationList;
+        this.filtroLocationList = housingLocationList;
+      });
   }
 
   filtraResultados(texto: string) {
@@ -38,6 +35,8 @@ export class HomeComponent {
       return;
     }
 
-    this.filtroLocationList = this.housingLocationList.filter(cadaLista => cadaLista?.cidade.toLowerCase().includes(texto.toLowerCase()));
+    this.filtroLocationList = this.housingLocationList.filter(
+      cadaLista => cadaLista?.cidade.toLowerCase().includes(texto.toLowerCase())
+    );
   }
 }
