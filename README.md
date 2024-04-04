@@ -1,6 +1,6 @@
-# AngularTutorial
+# Angular Tutorial - Feito por Davyd
 
-Projeto feito com [Angular CLI](https://github.com/angular/angular-cli) version 17.2.2.
+Projeto feito com [Angular CLI](https://github.com/angular/angular-cli) versão 17.2.2.
 
 ## Development server
 
